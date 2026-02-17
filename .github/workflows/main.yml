@@ -1,0 +1,29 @@
+name: IITM Final Submission
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # This allows you to manual trigger if needed
+
+jobs:
+  check-requirements:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 1. Identification Step
+      - name: 23f2003863@ds.study.iitm.ac.in
+        run: echo "Submission for Sachin Jha"
+
+      # 2. Cache Setup
+      - name: Setup Cache
+        id: my-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: cache-f0b8518
+
+      # 3. THE CRITICAL STEP (Must match error message exactly)
+      - name: prime-cache-f0b8518
+        run: echo "Cache status is ${{ steps.my-cache.outputs.cache-hit }}"
