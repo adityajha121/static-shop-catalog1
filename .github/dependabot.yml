@@ -1,7 +1,0 @@
-version: 2
-updates:
-  - package-ecosystem: "pip" # Since you are using Python for ML
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    # This keeps your 23f2003863@ds.study.iitm.ac.in project secure
